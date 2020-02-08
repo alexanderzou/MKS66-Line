@@ -9,13 +9,12 @@ def draw_line( x0, y0, x1, y1, screen, color ):
     B = -1 * (x1 - x0)
     m = -1 * float(A) / float(B)
     #print('{}, {}, {}, {}, {}'.format(m, x0, y0, x1, y1))
+    x = x0
+    y = y0
     if m > 0 and m <= 1:
         #run O1/O5
-        x = x0
-        y = y0
         d = 2 * A + B
         while x <= x1:
-            #print('{}, {}'.format(x, y))
             plot(screen, color, x, y)
             if d > 0:
                 y += 1
@@ -24,7 +23,14 @@ def draw_line( x0, y0, x1, y1, screen, color ):
             d += 2 * A
     if m > 1:
         #run O2/O6
-        True == True
+        d = A + (2 * B)
+        while y <= y1:
+            plot(screen, color, x, y)
+            if d < 0:
+                x += 1
+                d += 2 * A
+            y += 1
+            d += 2 * B
     if m < 0 and m >= -1:
         #run O8/O4
         True == True
