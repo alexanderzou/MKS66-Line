@@ -33,7 +33,14 @@ def draw_line( x0, y0, x1, y1, screen, color ):
             d += 2 * B
     if m < 0 and m >= -1:
         #run O8/O4
-        True == True
+        d = 2 * A - B
+        while x <= x1:
+            plot(screen, color, x, y)
+            if d < 0:
+                y -= 1
+                d -= 2 * B
+            x += 1
+            d += 2 * A
     if m < -1:
         #run O7/O3
         True == True
