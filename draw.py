@@ -14,7 +14,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
             x += 1
     B = -1 * (x1 - x0)
     if B == 0:
-        print('{}, {}'.format(y, y1))
+        #print('{}, {}'.format(y, y1))
         if y0 > y1:
             y = y1
             y1 = y0
